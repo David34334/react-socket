@@ -7,8 +7,7 @@ const http = require('http');
 //Socket - Configuration
 const socketio = require('socket.io',(http, {
     cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
+        origin: false
     }
 }));
 
