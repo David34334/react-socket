@@ -5,10 +5,14 @@ const express = require('express');
 const http = require('http');
 
 //Socket - Configuration
-const socketio = require('socket.io',(http, {
+const socketio = require('socket.io',({
+    path: '/socket/socket.io',
+    serveClient: false,
     cors: {
-        origin: false
-    }
+        origin: "*",
+        credentials: true
+    },
+    allowEIO3: true
 }));
 
 //Path
