@@ -5,15 +5,7 @@ const express = require('express');
 const http = require('http');
 
 //Socket - Configuration
-const socketio = require('socket.io',({
-    path: '/socket/socket.io',
-    serveClient: false,
-    cors: {
-        origin: "*",
-        credentials: true
-    },
-    allowEIO3: true
-}));
+const socketio = require('socket.io');
 
 //Path
 const path = require('path');
